@@ -15,7 +15,7 @@ const Card = ({ place }) => {
   const [showLikeButton, setShowLikeButton] = useState(true);
   useEffect(() => {
     let favoritePlace = favourites.filter(
-      (favourite) => favourite.id == place.id
+      (favourite) => favourite.id === place.id
     );
     if (favoritePlace.length > 0) {
       setShowLikeButton(false);
@@ -45,12 +45,11 @@ const Card = ({ place }) => {
               <h2>{place.place_type}</h2>
             </div>
             <div class="gridtext">
-              <p>"Opens"{place.time_to_travel}"hours."</p>
-
+      
               <p>{place.description}</p>
             </div>
             <div class="input-button">
-              <a href={place.googel_map_link} target="_blank">
+              <a href={place.google_map_link} target="_blank">
                 {" "}
                 Direction{" "}
               </a>

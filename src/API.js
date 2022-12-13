@@ -28,7 +28,7 @@ export default class API {
       query.append("category", category);
     }
 
-    if (query.toString() != "") {
+    if (query.toString() !== "") {
       url += "?" + query.toString();
     }
 
